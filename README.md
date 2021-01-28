@@ -1,6 +1,8 @@
 # -blinker-ESP8266---
 [点灯科技 blinker]通过ESP8266接入语音助手-智能墙壁开关
 
+视频教程：https://www.bilibili.com/video/BV1dz4y1f7gt
+
 前提：家里的墙壁开关里必须同时有零线和火线。
 一：前期准备
 1.  安装Arduino IDE 1.8.7或更新版本（目前最新版本为1.8.13）
