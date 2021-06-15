@@ -6,10 +6,10 @@
 前提：家里的墙壁开关里必须同时有零线和火线。
 一：前期准备
 1.  安装Arduino IDE 1.8.7或更新版本（目前最新版本为1.8.13）
-软件链接 https://www.arduino.cn/thread-5838-1-1.html（来自Arduino论坛）
+软件链接 https://www.arduino.cn/thread-5838-1-1.html （来自Arduino论坛）
 
 2.  Arduino IDE安装esp8266扩展
-  目前在线安装有点问题，推荐离线安装。下载链接：https://share.weiyun.com/5CGEKJO（来自Arduino论坛），目前最新版本为2.7.4。
+  目前在线安装有点问题，推荐离线安装。下载链接：https://share.weiyun.com/5CGEKJO （来自Arduino论坛），目前最新版本为2.7.4。
 
 安装好之后，打开Arduino IDE，打开【工具】，开发板选择就可以选择ESP8266了。
 
