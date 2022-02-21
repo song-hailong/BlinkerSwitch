@@ -1,15 +1,15 @@
-/*一楼客厅的灯泡*/
+/*xxxx的灯泡*/
 #define BLINKER_WIFI
 #define BLINKER_MIOT_LIGHT//支持小爱同学
 #include <Blinker.h>
 
 char auth[] = "e350489ea1cf";//app中获取到的Secret Key(密钥)
-char ssid[] = "song_second";//WIFI账号
-char pswd[] = "20110722";//WIFI密码
+char ssid[] = "xxxxxxxx";//WIFI账号
+char pswd[] = "xxxxxx";//WIFI密码
 
 // 设置各引脚别名
-const int GPIO = 10; // 定义继电器输入引脚为GPIO/10
-const int KEY = 5; // 定义按键引脚
+#define GPIO 10 // 定义继电器输入引脚为GPIO/10
+#define KEY 5 // 定义按键引脚
 // 变量定义
 bool State = 0; // 存储墙壁开关状态的变量
 bool led_state = false;// 存储灯状态的变量
