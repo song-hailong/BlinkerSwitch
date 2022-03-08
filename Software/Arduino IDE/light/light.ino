@@ -1,6 +1,7 @@
 /*xxxx的灯泡*/
 #define BLINKER_WIFI
 #define BLINKER_MIOT_LIGHT//支持小爱同学
+#define BLINKER_OTA_VERSION_CODE "2.0.0"
 #include <Blinker.h>
 
 char auth[] = "xxxxxxxx";//app中获取到的Secret Key(密钥)
