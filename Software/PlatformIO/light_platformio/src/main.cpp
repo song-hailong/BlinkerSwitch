@@ -5,11 +5,9 @@
 #include <Blinker.h>
 #include "main.h"
 
-
 char auth[] = "xxxxxxxxxxxxxx";//app中获取到的Secret Key(密钥)
 char ssid[] = "xxxxxxxxxxxxxx";
 char pswd[] = "xxxxxxxxxxxxxx";
-
 
 MyLightState LightState; //灯的状态
 
