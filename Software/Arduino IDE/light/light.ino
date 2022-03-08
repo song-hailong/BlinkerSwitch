@@ -3,9 +3,9 @@
 #define BLINKER_MIOT_LIGHT//支持小爱同学
 #include <Blinker.h>
 
-char auth[] = "e350489ea1cf";//app中获取到的Secret Key(密钥)
+char auth[] = "xxxxxxxx";//app中获取到的Secret Key(密钥)
 char ssid[] = "xxxxxxxx";//WIFI账号
-char pswd[] = "xxxxxx";//WIFI密码
+char pswd[] = "xxxxxxxx";//WIFI密码
 
 // 设置各引脚别名
 #define GPIO 10 // 定义继电器输入引脚为GPIO/10
