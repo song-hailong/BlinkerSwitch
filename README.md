@@ -1,50 +1,55 @@
-# -blinker-ESP8266---
-[点灯科技 blinker]通过ESP8266接入语音助手-智能墙壁开关
+# Blinker-Switch
 
-视频教程：https://www.bilibili.com/video/BV1dz4y1f7gt
+通过改造墙壁开关，实现语音控制灯的效果。接入的平台为点灯科技，语音助手为小爱同学，可改造成天猫精灵和百度小度。
 
-打包好的软件包阿里云链接：https://www.aliyundrive.com/s/KLycuo3tpkM
+Blinker开发环境搭建可根据文档**[点灯科技开发环境搭建](4. Docs/点灯科技开发环境搭建.md)** 进行操作。
 
-前提：家里的墙壁开关里必须同时有零线和火线。
+## 一：项目文件介绍
 
-## 一：前期准备
+#### 1. **Hardware**
 
-1.  安装Arduino IDE 1.8.19或更新版本（目前最新版本为1.8.19）
+Hardware文件夹为Blinker-Switch电路的原理图和PCB文件，提供Altium Designer格式的源文件。
 
-    软件链接 https://www.arduino.cn/thread-5838-1-1.html （来自Arduino论坛）https://www.arduino.cc/en/software （来自官网）
+#### 2. **Software**
 
-2.  Arduino IDE安装esp8266扩展
-   
-    目前在线安装有点问题，推荐离线安装。下载链接：https://www.arduino.cn/thread-76029-1-1.html（来自Arduino论坛），目前最新版本为3.0.2。
-    安装好之后，打开Arduino IDE，打开【工具】，开发板选择就可以选择ESP8266了。
+Software文件夹为Blinker-Switch的程序源码。
 
-3. 下载blinkerArduino库
+2.1 **Arduino IDE**文件夹为初代程序代码，编译器为Arduino IDE，程序版本号为v2.0，推荐使用，对应的APP界面配置文件为：[界面配置_v2.0.txt](3. AppInterface/界面配置_v2.0.txt)。
 
-    下载链接：https://github.com/blinker-iot/blinker-library/archive/dev_3.0.zip
+2.2 **PlatformIO**为后续修改的代码，编译器使用的PlatformIO，程序版本号为v3.0，连续测试一个月后出现卡死，此版本上传数据太多，对于ESP8266来说容易卡死，目前不推荐使用，后续有时间进行优化。对应的APP界面配置文件为：[界面配置_v3.0.txt](3. AppInterface/界面配置_v3.0.txt)。
 
-    将下载好的blinker库解压到 我的电脑>文档>Arduino>libraries 文件夹中
+#### 3. AppInterface
 
-4. 下载并安装blinker APP
-    下载链接：https://github.com/blinker-iot/app-release/releases
-    
-   * 在app中添加设备，获取Secret Key
+AppInterface文件夹中提供了APP界面配置文件，版本号对应程序代码版本号。
 
-        进入App，点击右上角的“+”号，然后选择添加设备，点击选择Arduino -> WiFi接入-> 选择要接入的服务商 -> 复制申请到的Secret Key
-    
-   * DIY界面
+#### 4. Docs
 
-        在设备列表页，点击刚才新建的设备图标，进入设备控制面板。首次进入设备控制面板，会弹出向导页，在向导页点击载入示例，即可载入示例组件。点击右上角的修改，选择开关的按钮，样式选择中间那种，按键类型选择：开关按键，再点击有上角的保存。之后我们就可以通过这个按键来控制并查看灯。
+相关的参考文件，包括环境搭建和芯片的Datasheet等。
 
-5. 硬件
+## 二：硬件说明
 
-      ​我是使用的自己绘制的电路板，学习阶段可以使用Node-MCU，真正接入到墙壁里还是需要自己绘制板子，不然板子太大放不进去。
+这款板子是零火版取电的，也就是86盒里面必须要有零线，如果没有的话，可以尝试加入单火取电模块，某宝有卖。
 
-## 二：程序下载
+> AC220V，一定一定要注意安全，一定要断电后操作。
 
-将程序烧入即可。
+## 三：软件说明
 
-## 三：APP界面配置
+选择对应的串口，以及开发板型号，将程序烧入即可。
+
+## 三：APP配置
 
 将界面配置文件导入到app设备中。
 
+1. 在app中添加设备，获取Secret Key
 
+   进入App，点击右上角的“+”号，然后选择添加设备，点击选择Arduino -> WiFi接入-> 选择要接入的服务商 -> 复制申请到的Secret Key
+
+   ![](https://www.arduino.cn/data/attachment/forum/202008/22/203801di081tk7gji5c8ac.png)
+
+2. DIY界面
+
+   在设备列表页，点击刚才新建的设备图标，进入设备控制面板。首次进入设备控制面板，会弹出向导页，在向导页点击载入示例，即可载入示例组件。点击右上角的修改，选择开关的按钮，样式选择中间那种，按键类型选择：开关按键，再点击有上角的保存。之后我们就可以通过这个按键来控制并查看灯。
+
+   ![](https://www.arduino.cn/data/attachment/forum/202008/22/204028z5sqr85qql88j7hk.png)
+
+3. 需导入我配置的界面的话，打开新建的设备，点击右上角的 **... > 界面配置 **，粘贴[界面配置_v3.0.txt](3. AppInterface/界面配置_v3.0.txt)中的配置代码即可。
