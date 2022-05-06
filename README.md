@@ -52,4 +52,4 @@ AppInterface文件夹中提供了APP界面配置文件，版本号对应程序�
 
    ![](https://www.arduino.cn/data/attachment/forum/202008/22/204028z5sqr85qql88j7hk.png)
 
-3. 需导入我配置的界面的话，打开新建的设备，点击右上角的 **... > 界面配置 **，粘贴[界面配置_v3.0.txt](3. AppInterface/界面配置_v3.0.txt)中的配置代码即可。
+3. 需导入我配置的界面的话，在APP中打开新建的设备，点击右上角的 **... > 界面配置 **，粘贴[界面配置_v3.0.txt](3. AppInterface/界面配置_v3.0.txt)中的配置代码即可。
