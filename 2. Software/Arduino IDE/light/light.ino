@@ -10,7 +10,7 @@ char pswd[] = "xxxxxxxx";//WIFI密码
 
 // 设置各引脚别名
 #define GPIO 10 // 定义继电器输入引脚为GPIO/10
-#define KEY 5 // 定义按键引脚
+#define KEY 4 // 定义按键引脚
 // 变量定义
 bool State = 0; // 存储墙壁开关状态的变量
 bool led_state = false;// 存储灯状态的变量
