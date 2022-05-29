@@ -2,7 +2,7 @@
 
 通过改造墙壁开关，实现语音控制灯的效果。接入的平台为点灯科技，语音助手为小爱同学，可改造成天猫精灵和百度小度。
 
-Blinker开发环境搭建可根据文档 **[点灯科技开发环境搭建](https://song-hailong.github.io/2022/05/%E7%82%B9%E7%81%AF%E7%A7%91%E6%8A%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/)** 进行操作。
+Blinker开发环境搭建可根据文档 **[点灯科技开发环境搭建](https://www.songhailong.cn/2022/05/%E7%82%B9%E7%81%AF%E7%A7%91%E6%8A%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/)** 进行操作。
 
 ---
 
@@ -23,9 +23,9 @@ Hardware文件夹为Blinker-Switch电路的原理图和PCB文件，提供Altium 
 
 Software文件夹为Blinker-Switch的程序源码。
 
-2.1 **Arduino IDE**文件夹为初代程序代码，编译器为Arduino IDE，程序版本号为v2.0，推荐使用，对应的APP界面配置文件为：[界面配置_v2.0.txt](/3.%20AppInterface/界面配置_v2.0.txt)。
+2.1 **Arduino IDE**文件夹为初代程序代码，编译器为Arduino IDE，程序版本号为v2.0，推荐使用，对应的APP界面配置文件为：[界面配置_v2.0.txt](3.%20AppInterface/界面配置_v2.0.txt)。
 
-2.2 **PlatformIO**为后续修改的代码，编译器使用的PlatformIO，程序版本号为v3.0，连续测试一个月后出现卡死，此版本上传数据太多，对于ESP8266来说容易卡死，目前不推荐使用，后续有时间进行优化。对应的APP界面配置文件为：[界面配置_v3.0.txt](/3.%20AppInterface/界面配置_v3.0.txt)。
+2.2 **PlatformIO**为后续修改的代码，编译器使用的PlatformIO，程序版本号为v3.0，连续测试一个月后出现卡死，此版本上传数据太多，对于ESP8266来说容易卡死，目前不推荐使用，后续有时间进行优化。对应的APP界面配置文件为：[界面配置_v3.0.txt](3.%20AppInterface/界面配置_v3.0.txt)。
 
 #### 3. AppInterface
 
@@ -65,4 +65,4 @@ AppInterface文件夹中提供了APP界面配置文件，版本号对应程序�
 
    <img src="https://www.arduino.cn/data/attachment/forum/202008/22/204028z5sqr85qql88j7hk.png" style="zoom:80%;" />
 
-3. 需导入我配置的界面的话，在APP中打开刚才新建的设备，点击右上角的 **... > 界面配置**，粘贴[界面配置_v2.0.txt](/3.%20AppInterface/界面配置_v2.0.txt)中的配置代码即可。
+3. 需导入我配置的界面的话，在APP中打开刚才新建的设备，点击右上角的 **... > 界面配置**，粘贴[界面配置_v2.0.txt](3.%20AppInterface/界面配置_v2.0.txt)中的配置代码即可。
