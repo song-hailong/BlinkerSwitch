@@ -4,6 +4,8 @@
 
 Blinker开发环境搭建可根据文档 **[点灯科技开发环境搭建](https://www.songhailong.cn/2022/05/%E7%82%B9%E7%81%AF%E7%A7%91%E6%8A%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/)** 进行操作。
 
+PlatformIO IDE开发环境搭建可根据 [VSCode 下 PlatformIO 的安装教程](https://songhailong.cn/2023/01/VSCode%E4%B8%8BPlatformIO%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/) 进行安装。
+
 ---
 
 # 常见问题：
@@ -47,9 +49,13 @@ AppInterface文件夹中提供了APP界面配置文件，版本号对应程序�
 
 ## 三：程序说明
 
+将如下代码修改为自己的，设备密匙见下文。
+
+<img src="https://s2.loli.net/2023/01/14/hS4yqLcGA1njFHW.png" alt="image-20230114151741008" style="zoom: 67%;" />
+
 **烧入**：选择对应的串口，以及开发板型号，将程序烧入即可。
 
-## 三：APP配置
+## 四：APP配置
 
 将界面配置文件导入到app设备中。
 
