@@ -2,6 +2,8 @@
 
 通过改造墙壁开关，实现语音控制灯的效果。接入的平台为点灯科技，语音助手为小爱同学，可改造成天猫精灵和百度小度。
 
+视频链接为： [【blinker】1：ESP8266点灯科技开发环境搭建](https://www.bilibili.com/video/BV1sk4y127Ab/?spm_id_from=333.999.0.0&vd_source=5d0dd24722835df97c44f4058436cf53)  [【blinker】2：语音开关灯，墙壁开关改造篇！](https://www.bilibili.com/video/BV1dz4y1f7gt/?spm_id_from=333.999.0.0&vd_source=5d0dd24722835df97c44f4058436cf53)
+
 Blinker开发环境搭建可根据文档 **[点灯科技开发环境搭建](https://www.songhailong.cn/2022/05/%E7%82%B9%E7%81%AF%E7%A7%91%E6%8A%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/)** 进行操作。
 
 PlatformIO IDE开发环境搭建可根据 [VSCode 下 PlatformIO 的安装教程](https://songhailong.cn/2023/01/VSCode%E4%B8%8BPlatformIO%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/) 进行安装。
