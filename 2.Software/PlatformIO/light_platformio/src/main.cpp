@@ -1,13 +1,13 @@
 #define BLINKER_WIFI
 #define BLINKER_MIOT_LIGHT//支持小爱同学
-#define BLINKER_OTA_VERSION_CODE "3.0.0" //版本号
+#define BLINKER_OTA_VERSION_CODE "3.0.1" //版本号
 #include <Arduino.h>
 #include <Blinker.h>
 #include "main.h"
 
-char auth[] = "xxxxxxxxxxxxxx";//app中获取到的Secret Key(密钥)
-char ssid[] = "xxxxxxxxxxxxxx";
-char pswd[] = "xxxxxxxxxxxxxx";
+char auth[] = "xxxxxxxxxxxxxx"; // app中获取到的Secret Key(密钥)
+char ssid[] = "xxxxxxxxxxxxxx"; // WIFI名称
+char pswd[] = "xxxxxxxxxxxxxx"; // WIFI密码
 
 MyLightState LightState; //灯的状态
 
@@ -118,7 +118,7 @@ void heartbeat()
   //天花灯 <i class="fad fa-light-ceiling"></i>
   TextLightState.icon("fad fa-light-ceiling");
   TextLightState.color(LightState.LedState ? "Blue" : "Black");
-  TextLightState.print(LightState.LedState ? "灯状态: 开启" : "灯状态: 关闭");
+  TextLightState.print(LightState.LedState ? " 开启 " : " 关闭 ");
 
   char SprintfChar[25];
   sprintf(SprintfChar, "%lld天%lld时%lld分", 
@@ -132,14 +132,15 @@ void heartbeat()
   //2格信号 <i class="fad fa-wifi-2"></i>
   //3格信号 <i class="fad fa-wifi"></i>
   NumberSignal.icon("fad fa-wifi");
-  NumberSignal.color("Green");  //LimeGreen
+  //NumberSignal.color("Green");  //LimeGreen
   //NumberSignal.unit("Dbm");
   NumberSignal.print(LightState.SignalStrength);//信号强度
 
   //问号 <i class="far fa-question"></i>
-  TextStateChange.icon("far fa-question");
-  TextStateChange.color("MediumPurple");
-  TextStateChange.print("灯泡状态改变的原因");
+  //TextStateChange.icon("far fa-question");
+  //TextStateChange.color("MediumPurple");
+  //TextStateChange.print("灯泡状态改变的原因");
+  
   //重复箭头 <i class="fad fa-repeat-alt"></i>
   //语音 <i class="fad fa-microphone"></i>
   //手机 <i class="far fa-mobile-android"></i>
