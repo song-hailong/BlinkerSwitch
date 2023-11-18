@@ -15,6 +15,14 @@ PlatformIO IDE开发环境搭建可根据 [VSCode 下 PlatformIO 的安装教程
 1. 米家同步后无设备：需设备在线时点同步。
 2. 米家APP设备页不显示该设备：点灯科技只能接入小爱同学，不能显示在米家主页，只会在其他平台设备页显示。如需设置与米家设备联动，可选择 **小爱音响 -> 自定义指令 -> 输入对应指令（如：”打开客厅的灯泡“） -> 选择静默执行**。
 
+# 更新说明：
+
+更新 3.0.2 版本代码，加入自动配网程序 [WiFiManager](https://github.com/song-hailong/WiFiManager) ，可以上传 key，不需修改代码，直接烧入后配网即可。
+
+设置上电后连上WiFi `AutoConnectAP` ，在弹出的界面进行配网。
+
+![new ducument-300](https://res.cloudinary.com/dqv7zex1k/image/upload/v1697270720/2023/10/f20379d405ba7f8a2f63fbb42a090cae.jpg)
+
 
 
 ## 一：项目文件介绍
@@ -51,6 +59,8 @@ AppInterface文件夹中提供了APP界面配置文件，版本号对应程序�
 
 ## 三：程序说明
 
+> 3.0.2 版本的代码已加入配网界面，可不修改代码，直接烧入。
+
 将如下代码修改为自己的，设备密匙见下文。
 
 <img src="https://s2.loli.net/2023/01/14/hS4yqLcGA1njFHW.png" alt="image-20230114151741008" style="zoom: 67%;" />
@@ -65,12 +75,12 @@ AppInterface文件夹中提供了APP界面配置文件，版本号对应程序�
 
    进入App，点击右上角的“+”号，然后选择添加设备，点击选择Arduino -> WiFi接入-> 选择要接入的服务商 -> 复制申请到的Secret Key
 
-   <img src="https://www.arduino.cn/data/attachment/forum/202008/22/203801di081tk7gji5c8ac.png" style="zoom:80%;" />
+   ![Snipaste_2023-11-18_14-23-30](https://s2.loli.net/2023/11/18/PoLrGZSQhb32fwe.png)
 
 2. DIY界面
 
    在设备列表页，点击刚才新建的设备图标，进入设备控制面板。首次进入设备控制面板，会弹出向导页，在向导页点击载入示例，即可载入示例组件。点击右上角的修改，选择开关的按钮，样式选择中间那种，按键类型选择：开关按键，再点击有上角的保存。之后我们就可以通过这个按键来控制并查看灯。
 
-   <img src="https://www.arduino.cn/data/attachment/forum/202008/22/204028z5sqr85qql88j7hk.png" style="zoom:80%;" />
+   ![Snipaste_2023-11-18_14-31-04](https://s2.loli.net/2023/11/18/ZbYFrqKWoSHDEwC.png)
 
 3. 需导入我配置的界面的话，在APP中打开刚才新建的设备，点击右上角的 **... > 界面配置**，粘贴[界面配置_v2.0.txt](3.%20AppInterface/界面配置_v2.0.txt)中的配置代码即可。
